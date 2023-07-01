@@ -40,11 +40,11 @@ class MainActivity : AppCompatActivity() {
     private fun timing(time: Long) {
         val timeThread = Thread {
             var startTime = System.currentTimeMillis()
-            var elaspedTime :Long=0
-                while (true) {
-                elaspedTime = time-System.currentTimeMillis() + startTime
+            var elaspedTime: Long
+            while (true) {
+                elaspedTime = time - System.currentTimeMillis() + startTime
                 handler.postDelayed({ result.text = formatMilliseconds(elaspedTime) }, 100L)
-                    if (elaspedTime==0L) break
+                if (elaspedTime <= 0L) break
             }
             handler.post { button.isEnabled = true }
 
