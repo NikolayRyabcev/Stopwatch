@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Stopwatch</string>
+    <string name="time">Введите время в секундах</string>
+    <string name="button">Нажать на кнопку и \nввести время таймера</string>
+</resources>
